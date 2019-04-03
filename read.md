@@ -20,7 +20,7 @@ Quantization refers to the process of reducing the number of bits that represent
 * Activation Function: RELU
 * Dataset: MNIST
 * Framework: TensorFlow
-<BR>
+
 * Training Accuracy: 98.078%
 * Hardware Setup: Intel Core i7-8565U, NVIDIA GeForce MX150
   
@@ -28,6 +28,60 @@ Quantization refers to the process of reducing the number of bits that represent
 <img src = "https://user-images.githubusercontent.com/46529465/55491670-e944c680-5603-11e9-810d-50b41cce3f1b.png" width = "600">
 <img src = "https://user-images.githubusercontent.com/46529465/55491673-eb0e8a00-5603-11e9-9995-74e8d9691079.png" width = "600">
 
+
+### Setup
+* Model: LeNet-300-100
+* Learning Rate: 0.001
+* Epochs: 500
+* Batch Size: 64
+* Optimization: Adam Optimization
+* Activation Function: RELU
+* Dataset: CIFAR-10
+* Framework: TensorFlow
+
+* Training Accuracy: 79.628 %
+
+<img src = "https://user-images.githubusercontent.com/46529465/55492662-95d37800-5605-11e9-99db-86d16acc8cba.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/46529465/55492669-979d3b80-5605-11e9-9bd2-f21caa50def4.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/46529465/55492672-9966ff00-5605-11e9-8264-95837d9c4a00.png" width = "600">
+
+
+### Setup
+* Model: LeNet-5
+* Learning Rate: 0.001
+* Epochs: 10
+* Batch Size: 128
+* Optimization: Adam Optimization
+* Activation Function: RELU
+* Dataset: MNIST
+* Framework: TensorFlow
+
+* Training Accuracy: 99.02725%
+
+<img src = "https://user-images.githubusercontent.com/46529465/55492822-e054f480-5605-11e9-947e-7dd216c59735.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/46529465/55492826-e21eb800-5605-11e9-8361-9b3dd4dccd2e.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/46529465/55492851-e9de5c80-5605-11e9-8d7c-e45a384c85c0.png" width = "600">
+
+### Setup
+* Model: LeNet-5
+* Learning Rate: 0.00009
+* Epochs: 250
+* Batch Size: 32
+* Optimization: Adam Optimization
+* Activation Function: RELU
+* Dataset: CIFAR-10
+* Framework: TensorFlow
+
+* Training Accuracy: 79.51%
+
+<img src = "https://user-images.githubusercontent.com/46529465/55493020-3a55ba00-5606-11e9-9ef2-53915c9b5fa5.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/46529465/55493027-3de94100-5606-11e9-9043-d5fcc287d1f9.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/46529465/55493034-3fb30480-5606-11e9-87d9-944f692715a1.png" width = "600">
+
+## Conclusion
+* Quantization to 8 bits leads to a 4x reduction in compression
+* The test accuracy is within +- 0.05 % of the actual accuracy with float32
+* Quantization leads to 1.5x to 2x speedup in inference time 
 
 
 ## Knowledge Distillation <BR>
