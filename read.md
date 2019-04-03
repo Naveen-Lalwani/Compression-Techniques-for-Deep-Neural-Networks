@@ -10,38 +10,17 @@ processing DNNs on embedded systems. The compressed models will be benchmarked o
 MNIST and CIFAR-10 datasets.
 <BR>  
 <B>INTRODUCTION</B> <BR>
-Deep Neural networks have become ubiquitous today be-
-ing employed in a wide variety of applications but they are
-very computationally intensive and memory intensive. With
-modern DNN having more than a billion parameters, the
-amount of memory required to store them is significantly
-high. This makes them difficult to deploy them on embed-
-ded systems with limited hardware and processor resources.
-For example, Iphones do not allow installation of apps hav-
-ing memory requirements over 100 MBs on the cellular
-networks. Also, the energy consumption aspect of the DNN
-poses another hindrance to their use in smartphones and
-embedded technologies. Under 45nm CMOS technology,
-a 32 bit floating point add consumes 0.9pJ, a 32bit SRAM
-cache access takes 5pJ, while a 32bit DRAM memory ac-
-cess takes 640pJ (Han et al., 2016). The amount of energy
-that will be cosumed in computing a billion parameters will
-quickly drain the device and is beyond the power envelope
-of the of a typical device. Also, since the network won’t be
-able to fit on-chip storage, it would require costly DRAM
-access which makes real time processing a challenge on the
-smartphones.<BR>
-Thus, there is a need to compress these neural network
-models by reducing the number of insignificant parameters
-& weights and storing them with sufficient precision to make
-the DNN storage and energy efficient while at the same time
-maintaining the accuracy of the original model. The reduced
-precision and parameters will make the model faster due to
-quick arithmetic operations between small-bits parameters
-and also, due to smaller number of parameters. The smaller
-models can be used in the mobile systems for processing
-rather than using clouds to process the data. The project proposes the use of the compression techniques
-like Quantization, Pruning and Knowledge Distillation to
-reduce the size of the DNN and investigating the compatibilty of these techniques in a single pipeline to attain further
-compression while preserving accuracy and reducing loss
+Deep Neural networks have become ubiquitous today being employed in a wide variety of applications but they are
+very computationally intensive and memory intensive. With modern DNN having more than a billion parameters, the
+amount of memory required to store them is significantly high. This makes them difficult to deploy them on embedded systems with limited hardware and processor resources. For example, Iphones do not allow installation of apps having memory requirements over 100 MBs on the cellular networks. Also, the energy consumption aspect of the DNN poses another hindrance to their use in smartphones and
+embedded technologies. Under 45nm CMOS technology, a 32 bit floating point add consumes 0.9pJ, a 32bit SRAM
+cache access takes 5pJ, while a 32bit DRAM memory access takes 640pJ (Han et al., 2016). The amount of energy
+that will be cosumed in computing a billion parameters will quickly drain the device and is beyond the power envelope
+of the of a typical device. Also, since the network won’t be able to fit on-chip storage, it would require costly DRAM
+access which makes real time processing a challenge on the smartphones.<BR>
+Thus, there is a need to compress these neural network models by reducing the number of insignificant parameters
+& weights and storing them with sufficient precision to make the DNN storage and energy efficient while at the same time
+maintaining the accuracy of the original model. The reduced precision and parameters will make the model faster due to
+quick arithmetic operations between small-bits parameters and also, due to smaller number of parameters. The smaller
+models can be used in the mobile systems for processing rather than using clouds to process the data. The project proposes the use of the compression techniques like Quantization, Pruning and Knowledge Distillation to reduce the size of the DNN and investigating the compatibilty of these techniques in a single pipeline to attain further compression while preserving accuracy and reducing loss
 of energy.
