@@ -104,7 +104,9 @@ The formula described by Hinton et al. is as follows: <BR><BR>
 ### Effect of Temperature on Accuracy
 <img src = "https://user-images.githubusercontent.com/46529465/55494048-0da2a200-5608-11e9-88ed-72522ab2545b.png" width = "850">
 <BR><BR>
+  
 ### Setup: CIFAR 10 Data
+
 <img src = "https://user-images.githubusercontent.com/46529465/55494056-109d9280-5608-11e9-96bc-b6da7039d1e6.png" width = "850">
   
 ### Performance
