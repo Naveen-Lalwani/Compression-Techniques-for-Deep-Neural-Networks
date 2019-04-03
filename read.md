@@ -86,31 +86,32 @@ Quantization refers to the process of reducing the number of bits that represent
 
 # Knowledge Distillation <BR>
 Knowledge Distillation is a model compression method in which a small model is trained to mimic a pre-trained, larger model (or ensemble of models). This training setting is sometimes referred to as “teacher-student”, where the large model is the teacher and the small model is the student. The teacher model transfer generalizations to the student model rather than weights. In Knowledge Distillation the teacher models passed the “Dark Knowledge” to the student model i.e. which classes the teacher found to be more similar to the predicted class. Thus, Dark knowledge is the information, that, given the input, which classes are more likely to be the output besides the predicted class and is therefore, information about the relation of the input to the each class.(ner, 2017) <BR>
-The formula described by Hinton et al. is as follows:
+The formula described by Hinton et al. is as follows: <BR><BR>
 <img src = "https://user-images.githubusercontent.com/46529465/55493546-2494c480-5607-11e9-908c-d3767e593052.png" width = "300">
 
 <BR>Knowledge Distillation architectures: <BR>
 <img src = "https://user-images.githubusercontent.com/46529465/55493551-25c5f180-5607-11e9-8144-194886a148fb.png" width = "450">
+<BR><BR><BR>
 <img src = "https://user-images.githubusercontent.com/46529465/55493553-26f71e80-5607-11e9-82a7-a8c082356d14.png" width = "500">
 
 ## Findings
 ### Setup: MNIST Data
-<img src = "https://user-images.githubusercontent.com/46529465/55494038-0a0f1b00-5608-11e9-9ef3-a785bb8374d0.png" width = "700">
+<img src = "https://user-images.githubusercontent.com/46529465/55494038-0a0f1b00-5608-11e9-9ef3-a785bb8374d0.png" width = "850">
 
 ### Performance
-<img src = "https://user-images.githubusercontent.com/46529465/55494044-0bd8de80-5608-11e9-8159-8d463e35dfc3.png" width = "800">
+<img src = "https://user-images.githubusercontent.com/46529465/55494044-0bd8de80-5608-11e9-8159-8d463e35dfc3.png" width = "850">
 
 ### Effect of Temperature on Accuracy
-<img src = "https://user-images.githubusercontent.com/46529465/55494048-0da2a200-5608-11e9-88ed-72522ab2545b.png" width = "700">
+<img src = "https://user-images.githubusercontent.com/46529465/55494048-0da2a200-5608-11e9-88ed-72522ab2545b.png" width = "850">
 <BR><BR>
 ### Setup: CIFAR 10 Data
-<img src = "https://user-images.githubusercontent.com/46529465/55494056-109d9280-5608-11e9-96bc-b6da7039d1e6.png" width = "700">
+<img src = "https://user-images.githubusercontent.com/46529465/55494056-109d9280-5608-11e9-96bc-b6da7039d1e6.png" width = "850">
   
 ### Performance
-<img src = "https://user-images.githubusercontent.com/46529465/55494069-14c9b000-5608-11e9-9140-5c6d3a6964af.png" width = "800">
+<img src = "https://user-images.githubusercontent.com/46529465/55494069-14c9b000-5608-11e9-9140-5c6d3a6964af.png" width = "850">
 
 ### Effect of Temperature on Accuracy
-<img src = "https://user-images.githubusercontent.com/46529465/55494072-16937380-5608-11e9-815a-a89fc1468b95.png" width = "700">
+<img src = "https://user-images.githubusercontent.com/46529465/55494072-16937380-5608-11e9-815a-a89fc1468b95.png" width = "850">
 
 ## Conclusion
 * Knowledge Distillation increases the ability of shallow neural nets to perform better
