@@ -1,4 +1,4 @@
-ABSTRACT
+<B>ABSTRACT</B> <BR>
 Neural Networks today find their application in variety of fields, from Computer Vision to Natural Language
 processing, from Speech Recognition to classification. But they are computationally expensive, memory intensive
 and difficult to deploy on embedded systems. To attempt to solve this problem, the project will present the survey
