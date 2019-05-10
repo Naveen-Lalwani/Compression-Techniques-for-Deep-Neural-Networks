@@ -218,3 +218,36 @@ Pruning is a method to reduce the storage and computation required by neural net
 * Increasing the sparsity reduces the size significantly but the accuracy also take a big hit, so we need to consider a tradeoff between them
 * Though the network might be pruned deeply, the inference time per image becomes constant after a certain pruning limit but we record a speedup of 2x to 4x on LeNet-300-100 and around 1.2x on LeNet-5 on MNIST and CIFAR-10 datasets. 
 * We also record a size compression of 5x on LeNet-300-100 on MNIST while a compression of 18x on LeNet-5 on MNIST datasets with accuracy within + 3% of baseline models and similar compression rates on CIFAR-10 with accuracy within + 6% of baseline models.
+
+# Pruning follwed by Quantization
+* We pruned the base model and then in the same pipeline we quantized the pruned model and recorded the accuracy, inference time and size of various quantized models of different sparsity along with the non quantized counter parts. 
+* This has been done for both the models LeNet-300-100 and LeNet-5 on MNIST and CIFAR-10 datasets. 
+
+## Results
+### LeNet300-100 on MNIST
+<img src = "https://user-images.githubusercontent.com/44993623/57560987-53652f80-7357-11e9-961c-a6cf0be63902.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561001-6aa41d00-7357-11e9-9c05-b3977c28e10e.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561022-7d1e5680-7357-11e9-8b77-bb09dde03849.png" width = "850">
+
+### LeNet5 on MNIST
+<img src = "https://user-images.githubusercontent.com/44993623/57561043-9de6ac00-7357-11e9-88c0-e6bf6979f5e1.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561052-ac34c800-7357-11e9-9520-05f81607dc88.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561058-bc4ca780-7357-11e9-9ab0-a98c46289550.png" width = "850">
+
+### LeNet300-100 on CIFAR10
+<img src = "https://user-images.githubusercontent.com/44993623/57561272-bdca9f80-7358-11e9-8bf2-24308a1f6a19.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561277-ccb15200-7358-11e9-9a34-ae76b1367dc5.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561288-dcc93180-7358-11e9-91e4-3bd8c8fc5262.png" width = "850">
+
+### LeNet5 on CIFAR10
+<img src = "https://user-images.githubusercontent.com/44993623/57561314-f9656980-7358-11e9-8607-d70f64f65859.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561322-0a15df80-7359-11e9-85c0-0d9239d5cd5e.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561334-1ef27300-7359-11e9-8b21-1ea52669dcb8.png" width = "850">
+
+## Conclusion
+* Pruning and Quantization are orthogonal and don’t affect each other and can be used in a pipeline for deep compression of the neural networks. 
+* With such a pipeline we could achieve about 2x to 8x speedup on LeNet-300-100 on MNIST and about 2x to 7x speed up on CIFAR-10. For LeNet-5 on MNIST we observe a speed up of 1.2x to 1.4x and similar speedups in CIFAR-10. 
+* We observe very significant gain in the size compression of about 40x on LeNet300-100 on MNIST and 35x on LeNet-5 on MNIST and for LeNet-300-100 on CIFAR-10 we could expect a compression of 20x and on LeNet-5 a size compression of about 13x could be observed with minimal loss in accuracy.
+
+
+
