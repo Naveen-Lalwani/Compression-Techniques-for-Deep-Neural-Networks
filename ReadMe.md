@@ -94,28 +94,30 @@ The formula described by Hinton et al. is as follows: <BR><BR>
 
 ## Findings
 ### Setup: MNIST Data
-<img src = "https://user-images.githubusercontent.com/46529465/55494038-0a0f1b00-5608-11e9-9ef3-a785bb8374d0.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560795-3d0aa400-7356-11e9-8919-6f3ac7b08913.PNG" width = "850">
 
 ### Performance
-<img src = "https://user-images.githubusercontent.com/46529465/55494044-0bd8de80-5608-11e9-8159-8d463e35dfc3.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560811-56135500-7356-11e9-9012-cbbe3af6124f.PNG" width = "850">
 
 ### Effect of Temperature on Accuracy
-<img src = "https://user-images.githubusercontent.com/46529465/55494048-0da2a200-5608-11e9-88ed-72522ab2545b.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560833-76431400-7356-11e9-926b-59d2938a3432.PNG" width = "850">
 <BR><BR>
   
 ### Setup: CIFAR 10 Data
 
-<img src = "https://user-images.githubusercontent.com/46529465/55494056-109d9280-5608-11e9-96bc-b6da7039d1e6.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560846-91158880-7356-11e9-9d8f-1af664e95de4.PNG" width = "850">
   
 ### Performance
-<img src = "https://user-images.githubusercontent.com/46529465/55494069-14c9b000-5608-11e9-9140-5c6d3a6964af.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560858-a8547600-7356-11e9-9bf3-07518b119916.PNG" width = "850">
 
 ### Effect of Temperature on Accuracy
-<img src = "https://user-images.githubusercontent.com/46529465/55494072-16937380-5608-11e9-815a-a89fc1468b95.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560875-c0c49080-7356-11e9-82f7-a789baa7375e.PNG" width = "850">
 
 ## Conclusion
 * Knowledge Distillation increases the ability of shallow neural nets to perform better
 * Reduction in size is not always guaranteed but speedup is always present
+** For config1 on MNIST we observe a speedup of 6x in student model as compared to LeNet-5 and a speedup of 5.21x compared to LeNet-300-100 while for config 2 on MNIST, we observe a speedup of 7.72x in student model as compared to LeNet-5 and a speedup of 5.05x compared to LeNet-300-100
+** For config1 on CIFAR10 we observe a speedup of 6.67x in student model compared to both LeNet-5 and LeNet-300-100 while for config2, we find the speedup of 6.20x compared to both LeNet-5 and LeNet-300-100 
 * Accuracy takes quite a hit but maybe compensated for changing epochs, optimizer and learning rate
 * Temperature is a hyperparameter whose value needs to be experimented with to determine best distilled model
 
