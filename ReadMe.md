@@ -24,9 +24,8 @@ Quantization refers to the process of reducing the number of bits that represent
 * Training Accuracy: 98.078%
 * Hardware Setup: Intel Core i7-8565U, NVIDIA GeForce MX150
   
-<img src = "https://user-images.githubusercontent.com/46529465/55491665-e6e26c80-5603-11e9-8813-19f548cb27dd.png" width = "600">
-<img src = "https://user-images.githubusercontent.com/46529465/55491670-e944c680-5603-11e9-810d-50b41cce3f1b.png" width = "600">
-<img src = "https://user-images.githubusercontent.com/46529465/55491673-eb0e8a00-5603-11e9-9995-74e8d9691079.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/44993623/57559959-38dc8780-7352-11e9-9b8f-da15d75be224.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/44993623/57559998-6295ae80-7352-11e9-8bc6-9029a9a272c5.png" width = "600">
 
 
 ### Setup
@@ -41,9 +40,9 @@ Quantization refers to the process of reducing the number of bits that represent
 
 * Training Accuracy: 79.628 %
 
-<img src = "https://user-images.githubusercontent.com/46529465/55492662-95d37800-5605-11e9-99db-86d16acc8cba.png" width = "600">
-<img src = "https://user-images.githubusercontent.com/46529465/55492669-979d3b80-5605-11e9-9bd2-f21caa50def4.png" width = "600">
-<img src = "https://user-images.githubusercontent.com/46529465/55492672-9966ff00-5605-11e9-8264-95837d9c4a00.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/44993623/57560039-8953e500-7352-11e9-8361-5ee6248b2b6a.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/44993623/57560075-9ffa3c00-7352-11e9-8b8f-c2e8b1a65ef3.png" width = "600">
+<img src = "https://user-images.githubusercontent.com/44993623/57560094-b1dbdf00-7352-11e9-9b20-0204186058be.png" width = "600">
 
 
 ### Setup
