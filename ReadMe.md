@@ -122,6 +122,8 @@ The formula described by Hinton et al. is as follows: <BR><BR>
 # Pruning <BR>
 Pruning is a method to reduce the storage and computation required by neural networks by learning only the important connections, thereby, converting a fully connected layer into a sparse one. One of the methods proposed to prune the network follows a three step process. First, training of the network to learn which connections are important. Second step is to prune away the less significant weights, which could either be done by absolute value pruning or by a hessian loss function. The third and the final step is to retrain the pruned network to maintain accuracy. Second and third steps are repeated many times to perform iterative pruning which helps further to boost compression without loss of accuracy when compared to single aggressive pruning.<BR>
   
+ <img src = "https://user-images.githubusercontent.com/44993623/57560365-13e91400-7354-11e9-9def-97eb9b07035f.png" width = "850">
+  
 ## Findings
 ### Setup: LeNet300-100 MNIST Data
 * Model: LeNet-300-100
@@ -138,25 +140,12 @@ Pruning is a method to reduce the storage and computation required by neural net
 * Hardware setup: Intel Core i7-8750H, NVIDIA GeForce GTX 1050Ti Max-Q
 
 ### Results
-<img src = "https://user-images.githubusercontent.com/44993623/55851154-8a141400-5b25-11e9-8e2b-7ae5fa814a5b.PNG" width = "850">
-<img src = "https://user-images.githubusercontent.com/44993623/55851265-ee36d800-5b25-11e9-84fa-70ba3dc31e57.PNG" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560397-33803c80-7354-11e9-9a6d-d6189dbc3b4a.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560409-42ff8580-7354-11e9-842d-02f3005b4736.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560433-5ad70980-7354-11e9-94a0-de3b404a4acd.png" width = "850">
 
-### Setup: LeNet300-100 CIFAR10
-* Model: LeNet-300-100
-* Learning Rate: 0.01
-* Epochs: 200
-* Retrain Epochs: 200
-* Batch Size: 256
-* Optimization: Adam Optimization
-* Activation Function: RELU
-* Dataset: CIFAR-10
-
-* Training Accuracy: 64.77%
-* Test Accuracy: 48.55%
-
-### Results
-<img src = "https://user-images.githubusercontent.com/44993623/55851809-47077000-5b28-11e9-9bdd-325cb5ebaf96.PNG" width = "850">
-<img src = "https://user-images.githubusercontent.com/44993623/55851464-aebcbb80-5b26-11e9-9862-389e4fff57fb.PNG" width = "850">
+### Total Parameters
+<img src = "https://user-images.githubusercontent.com/44993623/57560471-9a055a80-7354-11e9-9424-455487284f77.PNG" width = "850">
 
 ### Setup: LeNet5 MNIST
 * Model: LeNet-5
@@ -172,7 +161,35 @@ Pruning is a method to reduce the storage and computation required by neural net
 * Test Accuracy: 98.88%
 
 ### Results
-<img src = "https://user-images.githubusercontent.com/44993623/55851521-f7747480-5b26-11e9-96b9-d6eecb5424bd.PNG" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560496-bef9cd80-7354-11e9-804a-396f303c567a.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560508-d933ab80-7354-11e9-880a-85e10920cee3.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560520-eb154e80-7354-11e9-8d38-c93cdfa36ddb.png" width = "850">
+
+### Total Parameters
+<img src = "https://user-images.githubusercontent.com/44993623/57560558-0da76780-7355-11e9-8ac9-cee0328ff207.PNG" width = "850">
+
+
+### Setup: LeNet300-100 CIFAR10
+* Model: LeNet-300-100
+* Learning Rate: 0.01
+* Epochs: 200
+* Retrain Epochs: 200
+* Batch Size: 256
+* Optimization: Adam Optimization
+* Activation Function: RELU
+* Dataset: CIFAR-10
+
+* Training Accuracy: 64.77%
+* Test Accuracy: 48.55%
+
+### Results
+<img src = "https://user-images.githubusercontent.com/44993623/57560591-2e6fbd00-7355-11e9-9cbc-b71677a9dd7c.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560609-421b2380-7355-11e9-88a2-1f182dbbadc9.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560624-53643000-7355-11e9-845e-578f9e194aa3.png" width = "850">
+
+### Total Parameters
+<img src = "https://user-images.githubusercontent.com/44993623/57560659-742c8580-7355-11e9-9d84-b8923a299753.PNG" width = "850">
+
 
 ### Setup: LeNet5 CIFAR10
 * Model: LeNet-5
@@ -188,12 +205,14 @@ Pruning is a method to reduce the storage and computation required by neural net
 * Test Accuracy: 55.37%
 
 ### Results
-<img src = "https://user-images.githubusercontent.com/44993623/55851602-52a66700-5b27-11e9-8938-7592382697fb.PNG" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560680-8dcdcd00-7355-11e9-83b2-c8f1b9b46f35.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560695-a2aa6080-7355-11e9-8289-12a6b4c7dc83.png" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57560703-b3f36d00-7355-11e9-95a8-aafbc501c78d.png" width = "850">
+
+### Total Parameters
+<img src = "https://user-images.githubusercontent.com/44993623/57560739-d7b6b300-7355-11e9-81a1-3daf620e961a.PNG" width = "850">
 
 ## Conclusion
-* Compression of upto 5x without loss in accuracy (after retraining).
-* Marginal speedup of upto 1.3x when compared to baseline models.
-* Cannot prune beyond a certain limit without loosing accuracy even after retraining because there is not much weight information left so that the model can fit the training data.
-
-
-
+* Increasing the sparsity reduces the size significantly but the accuracy also take a big hit, so we need to consider a tradeoff between them
+* Though the network might be pruned deeply, the inference time per image becomes constant after a certain pruning limit but we record a speedup of 2x to 4x on LeNet-300-100 and around 1.2x on LeNet-5 on MNIST and CIFAR-10 datasets. 
+* We also record a size compression of 5x on LeNet-300-100 on MNIST while a compression of 18x on LeNet-5 on MNIST datasets with accuracy within + 3% of baseline models and similar compression rates on CIFAR-10 with accuracy within + 6% of baseline models.
