@@ -116,8 +116,8 @@ The formula described by Hinton et al. is as follows: <BR><BR>
 ## Conclusion
 * Knowledge Distillation increases the ability of shallow neural nets to perform better
 * Reduction in size is not always guaranteed but speedup is always present
-** For config1 on MNIST we observe a speedup of 6x in student model as compared to LeNet-5 and a speedup of 5.21x compared to LeNet-300-100 while for config 2 on MNIST, we observe a speedup of 7.72x in student model as compared to LeNet-5 and a speedup of 5.05x compared to LeNet-300-100
-** For config1 on CIFAR10 we observe a speedup of 6.67x in student model compared to both LeNet-5 and LeNet-300-100 while for config2, we find the speedup of 6.20x compared to both LeNet-5 and LeNet-300-100 
+* For config1 on MNIST we observe a speedup of 6x in student model as compared to LeNet-5 and a speedup of 5.21x compared to LeNet-300-100 while for config 2 on MNIST, we observe a speedup of 7.72x in student model as compared to LeNet-5 and a speedup of 5.05x compared to LeNet-300-100
+* For config1 on CIFAR10 we observe a speedup of 6.67x in student model compared to both LeNet-5 and LeNet-300-100 while for config2, we find the speedup of 6.20x compared to both LeNet-5 and LeNet-300-100 
 * Accuracy takes quite a hit but maybe compensated for changing epochs, optimizer and learning rate
 * Temperature is a hyperparameter whose value needs to be experimented with to determine best distilled model
 
