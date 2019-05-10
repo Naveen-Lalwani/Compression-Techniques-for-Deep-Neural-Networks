@@ -250,4 +250,30 @@ Pruning is a method to reduce the storage and computation required by neural net
 * We observe very significant gain in the size compression of about 40x on LeNet300-100 on MNIST and 35x on LeNet-5 on MNIST and for LeNet-300-100 on CIFAR-10 we could expect a compression of 20x and on LeNet-5 a size compression of about 13x could be observed with minimal loss in accuracy.
 
 
+# Knowledge Distillation followed by Quantization
+* Distilled the knowledge of the teacher model in the student model and then in the same pipeline we have quantized the student model to int8 precision for both the datasets MNIST and CIFAR-10 for both LeNet-300-100 and LeNet-5 models.
+* We have recorded the size, accuracy and the inference time per image on both the hardware configurations and have plotted the results for original distilled student model and quantized student model.
+
+## Results
+<img src = "https://user-images.githubusercontent.com/44993623/57561434-a213c900-7359-11e9-92ea-c93b37604209.PNG" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561452-c374b500-7359-11e9-9f85-45d2d9aa48c8.PNG" width = "850">
+<img src = "https://user-images.githubusercontent.com/44993623/57561467-d7b8b200-7359-11e9-8e54-a039ef74b4e3.PNG" width = "850">
+ 
+ ## Conclusion
+* We see a reduction of 4x size in the quantized student model which is 25x smaller than the original LeNet-300-100 model for MNIST and CIFAR-10 datasets and 6x smaller than LeNet-5 model on MNIST and 1.7x reduction on CIFAR-10.
+* There is almost no accuracy loss on quantization of student model and the accuracy is almost the same as before quantization thus, preserving accuracy.
+* There is almost a 11x – 13x speedup in the quantized student model as compared to original teacher models for both the datasets.
+
+
+# Final Conclusion
+* Deep Neural Network Compression and acceleration techniques like Quantization, Pruning and Knowledge Distillation result always in reduction of latency and size with almost minimal loss of accuracy. 
+* There are tradeoffs when applying these techniques individually but a balance between the tradeoffs can help achieve smaller and faster inference models with almost no accuracy loss.
+* These techniques can be combined together in the pipelines knowledge distillation followed by quantization of student model and pruned model followed by quantization. 
+* We have achieved a speedup of 2x to 12x and a size reduction 4x to 40x by applying these techniques individually and together while maintaining accuracy within + 5% levels of the baseline models and have been successful as well.
+
+# Future Work
+* We would like to do power analysis on GPUs for this we are planning to run these models on GPUs which support nvidia-smi.
+* Further exploration of combinations are planned including distilling the knowledge of the original model (teacher) to a pruned model of the original model (student) and then quantizing this student model. 
+* Another combination to explore is prunning a distilled model and then quantizing the pruned distilled model.
+
 
